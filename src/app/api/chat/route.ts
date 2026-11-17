@@ -15,6 +15,7 @@ export async function POST(req: Request) {
         const question = messages[messages.length - 1].content;
 
         const model = new ChatOpenAI({
+            model: "gpt-4o-mini",
             temperature: 0.8,
             streaming: true,
             callbacks: [handlers],
